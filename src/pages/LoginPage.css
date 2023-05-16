@@ -1,0 +1,131 @@
+:root{
+    --colorSkyBlue: #1d96ff;
+    --colorBlack: #111;
+    --colorGray: #656565;
+    --colorWhite: #fff;
+    --fontArialBlack: 'Arial black';
+    --fontTimes: 'Times new roman';
+    --fontSegoe: 'Segoe UI'
+}
+.container0{
+    background: #232323;
+    height: 92vh;
+    padding: 50px 100px;
+}
+.container1{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 0 7px 1px var(--colorGray);
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background: var(--colorSkyBlue);
+    padding: 50px;
+}
+.align-margin{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--fontTimes);
+    font-size: 17px;
+    color: var(--colorWhite);
+}
+.align-margin:first-child{
+    font-family: var(--fontArialBlack);
+    font-size: 31px;
+}
+.btnSignUp, .btnSignIn{
+    font-family: var(--fontSegoe);
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    background: var(--colorWhite);
+}
+.btnSignIn{
+    background: var(--colorSkyBlue);
+    color: var(--colorWhite);
+}
+.containerButton{
+    position: relative;
+}
+.btnSignUp:before, .btnSignIn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0px;
+    height: 45px;
+    border-radius: 50px;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-right: none;
+}
+.btnSignUp:hover::before, .btnSignIn:hover:before{
+    width: 150px;
+    border: 2px solid var(--colorGray);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background: var(--colorWhite);
+    padding: 50px;
+}
+.titleForm{
+    color: var(--colorSkyBlue);
+    font-family: var(--fontArialBlack);
+    margin-bottom: 25px;
+    text-align: center;
+}
+.descriptionForm{
+    margin-bottom: 25px;
+    font-family: var(--fontSegoe);
+    font-size: 18px;
+    color: var(--colorBlack);
+    text-align: center;
+}
+.contentInput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 70%;
+    position: relative;
+}
+.labelText{
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+    font-size: 18px;
+    color: var(--colorGray);
+}
+.inputInfo{
+    border: none;
+    border-bottom: 1px solid var(--colorGray);
+    outline: none;
+    padding-left: 7px;
+    height: 40px;
+    font-family: var(--fontSegoe);
+    font-size: 18px;
+    font-weight: normal;
+}
+.inputInfo:focus ~ .labelText,
+.inputInfo:valid ~ .labelText{
+    top: -17px;
+    left: 5px;
+    font-size: 15px;
+}
+.forgotPassword{
+    margin-bottom: 25px;
+    background: var(--colorWhite);
+    box-shadow: 0 0 5px var(--colorGray);
+}
